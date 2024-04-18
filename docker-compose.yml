@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  amdfas:
+    build:
+      context: ./amdfas
+    ports:
+      - "8000:8000"  
+
+  api_analyzer:
+    build:
+      context: ./amdfas/api_analyzer
+    ports:
+      - "8001:8000"  
+
+  file_analyzer:
+    build:
+      context: ./amdfas/file_analyzer
+    ports:
+      - "8002:8000"  
+
+  memory_analyzer:
+    build:
+      context: ./amdfas/memory_analyzer
+    ports:
+      - "8003:8000"  
+
+  network_analyzer:
+    build:
+      context: ./amdfas/network_analyzer
+    ports:
+      - "8004:8000" 
+
+
+
