@@ -4,32 +4,35 @@ services:
   amdfas:
     build:
       context: ./amdfas
+    container_name: amdfas-microserv
     ports:
       - "8000:8000"  
 
   api_analyzer:
     build:
       context: ./amdfas/api_analyzer
+    container_name: api--microserv
     ports:
       - "8001:8000"  
 
   file_analyzer:
     build:
       context: ./amdfas/file_analyzer
+    container_name: file--microserv
     ports:
       - "8002:8000"  
 
   memory_analyzer:
     build:
       context: ./amdfas/memory_analyzer
+    container_name: memory--microserv
     ports:
       - "8003:8000"  
 
   network_analyzer:
     build:
       context: ./amdfas/network_analyzer
+    container_name: network--microserv
     ports:
       - "8004:8000" 
-
-
 
